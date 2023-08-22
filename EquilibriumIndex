@@ -1,0 +1,42 @@
+class Solution {
+
+    
+    // a: input array
+    // n: size of array
+    // Function to find equilibrium point in the array.
+    public static int equilibriumPoint(long arr[], int n) 
+    {
+        // Your code here
+        int[] intArray = Arrays.stream(arr).mapToInt(i -> (int) i).toArray();
+        
+        int tsum=0;
+        int lsum=0;
+        int rsum=0;
+        int ans=-1;
+        
+        if(n==1)
+        {
+            return 1;
+        }
+        else
+        {
+            for(int i:intArray)
+            {
+                tsum = tsum + i;
+            }
+        
+            for(int i=1;i<n;i++)
+            {
+                lsum=lsum+intArray[i-1];
+                rsum=tsum-lsum-intArray[i];
+            
+                if(lsum==rsum)
+                {
+                    ans=i+1;
+                    break;
+                }
+            }
+        }
+        return ans;
+    }
+}
