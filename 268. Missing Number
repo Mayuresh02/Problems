@@ -1,0 +1,51 @@
+/*CYCLIC SORT APPROACH*/
+
+class Solution 
+{
+    public int missingNumber(int[] nums) 
+    {
+        for(int i=0;i<nums.length;)
+        {
+            int j=nums[i];
+
+            if(nums[i]<nums.length && nums[i]!=nums[j])
+            {
+                int temp=nums[i];
+                nums[i]=nums[j];
+                nums[j]=temp;
+            }
+            else
+            {
+                i++;
+            }
+        }
+
+        for(int i=0;i<nums.length;i++)
+        {
+            if(nums[i] != i)
+            {
+                return i;
+            }
+        }
+
+        return nums.length;
+    }
+}
+
+/*Optimized Approach*/
+
+class Solution 
+{
+    public int missingNumber(int[] nums) 
+    {
+        int size=nums.length;
+        int sum=(size*(size+1)) / 2;
+
+        for(int i=0;i<size;i++)
+        {
+            sum-=nums[i];
+        }
+
+        return sum;
+    }
+}
