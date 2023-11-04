@@ -1,0 +1,32 @@
+class Mayuresh
+{
+    public Mayuresh()
+    {
+        
+    }
+    
+    private static Mayuresh instance;
+    
+    static Mayuresh checkInstance()
+    {
+        if(instance==null)
+        {
+            System.out.println("0");
+            instance = new Mayuresh();
+            return instance;
+        }
+        System.out.println("New instance started :1");
+        return instance;
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Mayuresh m1=new Mayuresh();
+	    m1.checkInstance();
+	    Mayuresh m2=new Mayuresh();
+	    m2.checkInstance();
+	}
+}
