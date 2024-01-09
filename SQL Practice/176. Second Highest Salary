@@ -1,0 +1,5 @@
+1) SELECT max(salary) as SecondHighestSalary FROM Employee WHERE Salary < (SELECT max(Salary) FROM Employee) //Only shows second highest salary.
+
+2) SELECT * FROM employee WHERE salary = (SELECT MAX(salary) FROM employee WHERE salary < (SELECT MAX(salary) FROM employee)); //Shows all records of employees.
+
+3) Using Limit & Offset -> SELECT * FROM employee ORDER BY salary DESC LIMIT 1 OFFSET 1;
