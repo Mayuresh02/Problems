@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    int arr[]=new int[]{1,2,3,4,5};
+	    int arr2[]=arr;
+	    
+	    System.out.println(Arrays.toString(arr2));
+	    
+	    arr2[0]=7;
+	    
+	    System.out.println(Arrays.toString(arr));
+	}
+}
