@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner in=new Scanner(System.in);
+	    
+	    System.out.print("Enter Base & Power :");
+	    int base=in.nextInt();
+	    int power=in.nextInt();
+	    int answer=1;
+	    
+	    while(power>0)
+	    {
+	        if((power&1)==1)
+	        {
+	            answer *= base;
+	        }
+	        
+	        base*=base;
+	        power >>= 1;
+	    }
+	    
+	    System.out.println("Answer is :"+answer);
+	}
+}
