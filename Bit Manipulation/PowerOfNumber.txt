@@ -10,7 +10,13 @@ public class Main
 	    int base=in.nextInt();
 	    int power=in.nextInt();
 	    int answer=1;
-	    
+
+	    if(n<0) //for negative power
+            {
+              x=1/x;
+              n=Math.abs(n);
+            }
+
 	    while(power>0)
 	    {
 	        if((power&1)==1)
