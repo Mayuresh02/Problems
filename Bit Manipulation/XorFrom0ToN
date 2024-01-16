@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner in=new Scanner(System.in);
+	    
+	    System.out.print("Enter number :");
+	    int number=in.nextInt();
+	    int ans=0;
+	    
+	    for(int i=0;i<=number;i++)
+	    {
+	        ans^=i;
+	        System.out.println(i+"'s xor is :"+ans);
+	    }
+	}
+}
+
+/*
+Above code will give TimeLimitExceeded for large inputs so you can use following as code.
+If num%4==0 return num
+If num%4==1 return 1
+If num%4==2 return a+1
+else return 0
+*/
