@@ -1,0 +1,50 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner in=new Scanner(System.in);
+	    
+	    System.out.print("Enter number :");
+	    int base=in.nextInt();
+	    int answer=0;
+	    
+	    while(base!=0)
+	    {
+	        if((base&1)==1)
+	        {
+	            answer++;
+	        }
+	        
+	        base >>= 1;
+	    }
+	    
+	    System.out.println("Answer is :"+answer);
+	}
+}
+
+OR
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner in=new Scanner(System.in);
+	    
+	    System.out.print("Enter number :");
+	    int base=in.nextInt();
+	    int answer=0;
+	    
+	    System.out.println(Integer.toBinaryString(base));
+	    while(base>0)
+	    {
+	        answer++;
+	        base &= (base-1); //updating base
+	    }
+	    
+	    System.out.println("Answer is :"+answer);
+	}
+}
