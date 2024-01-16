@@ -1,0 +1,15 @@
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    int a=4;
+	    if((a&(a-1))==0) //100(4)=011(3)+001(1); &(anding) 100 & 011 it will give 0. So it is power of 2
+	    {
+	        System.out.println("It is a power or 2");
+	    }
+	    else
+	    {
+	        System.out.println("Not power of 2");
+	    }
+	}
+}
