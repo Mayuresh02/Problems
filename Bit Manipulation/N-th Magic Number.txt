@@ -1,0 +1,20 @@
+/*n-th magic number means that, the number with power of 5 starting with 1*/
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    int n=5;
+	    int ans=0;
+	    int base=5;
+	    
+	    while(n>0)            // while number != 0
+	    {
+	        int last=n&1;     // Getting the last binary bit of n;
+	        n>>=1;            // Removing the last bit from the number(Or dividing it by 2)
+	        ans+=last*base;   // Adding the power with answer
+	        base*=5;          //Increasing power of base
+	    }
+	    
+	    System.out.println(ans);
+	}
+}
