@@ -1,0 +1,9 @@
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    long number=937317;
+	    long len=(long)(Math.log(number)/Math.log(10)+1); // Math.log(10): - For decimal numbers, change this to any other like 2,8 etc. to get length of that number system.
+	    System.out.println(len);
+	}
+}
